@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Margen de Ganancia | Python · ConfiguroWeb</title>
+  <meta name="description" content="Obtén el margen en % y el precio sugerido para alcanzarlo.">
+  <meta property="og:title" content="Calculadora de Margen de Ganancia · Python">
+  <meta property="og:description" content="Obtén el margen en % y el precio sugerido para alcanzarlo.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>📈 Calculadora de Margen de Ganancia</h1>
+      <p class="tagline">Calcula el margen de ganancia de tus productos</p>
+    </div>
+  </header>
+  <main class="container">
+    <div id="py-loader" class="loader" style="text-align:center;padding:2rem;color:#64748b;">
+      <div class="spinner"></div>
+      <p>Cargando Python (PyScript)…</p>
+    </div>
+    <section id="app" class="app-card hidden">
+      <div class="form-grid">
+        <div class="form-group">
+  <label for="costo">💰 Costo del producto</label>
+  <input type="number" id="costo" min="0" step="0.01" placeholder="Ej: 15000">
+  <small>Costo de adquisición</small>
+</div>
+        <div class="form-group">
+  <label for="precio">💲 Precio de venta</label>
+  <input type="number" id="precio" min="0" step="0.01" placeholder="Ej: 25000">
+  <small>Precio final</small>
+</div>
+      </div>
+      <div class="actions">
+        <button py-click="calcular_handler" class="btn btn-primary">📊 Calcular</button>
+        <button py-click="guardar_datos" class="btn btn-secondary">💾 Guardar datos</button>
+      </div>
+      <div id="resultado" class="result-box hidden" role="status" aria-live="polite"></div>
+    </section>
+    <section class="info-section">
+      <h2>¿Qué es Calculadora de Margen de Ganancia?</h2>
+      <p>Margen = (precio - costo) / precio × 100.</p>
+      <p>App construida con <strong>Python real</strong> (PyScript) en tu navegador.
+         Tus datos se guardan localmente, nunca salen de tu equipo.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>Hecho con 🐍 Python + PyScript por
+        <a href="https://configuroweb.com" target="_blank" rel="noopener">ConfiguroWeb</a> · 2026</p>
+    </div>
+  </footer>
+  <script type="py" src="app.py" async></script>
+  <script>
+    window.addEventListener('py:ready', () => {
+      document.getElementById('py-loader').classList.add('hidden');
+      document.getElementById('app').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
