@@ -1,7 +1,6 @@
 # Calculadora de Margen de Ganancia 🐍
 
 [![Python](https://img.shields.io/badge/Python-100%25-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Deploy](https://github.com/configurowebmax/python-margen-ganancia-productos/actions/workflows/pages.yml/badge.svg)](https://github.com/configurowebmax/python-margen-ganancia-productos/actions)
 [![Live Demo](https://img.shields.io/badge/Demo-GitHub%20Pages-success?logo=github&logoColor=white)](https://configurowebmax.github.io/python-margen-ganancia-productos/)
 [![License](https://img.shields.io/badge/Licencia-MIT-blue)](LICENSE)
 
